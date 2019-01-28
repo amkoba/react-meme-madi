@@ -1,0 +1,58 @@
+container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font: 15px arial;
+  background: #fff;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: block;
+
+}
+
+
+.App {
+  background-color: #e7e7e7;
+  padding: 10px;
+}
+.App div{
+  padding: 0 75px;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+@media only screen and (min-width : 481px) {
+  .row.equal-height {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .row.equal-height > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+  }
+  .row.equal-height.row:after,
+  .row.equal-height.row:before {
+      display: flex;
+  }
+
+  .row.equal-height > [class*='col-'] > .thumbnail,
+  .row.equal-height > [class*='col-'] > .thumbnail > .caption {
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+  }
+  .row.equal-height > [class*='col-'] > .thumbnail > .caption > .flex-text {
+      flex-grow: 1;
+  }
+  .row.equal-height > [class*='col-'] > .thumbnail > img {
+      width: 100%;
+      height: 200px; /* force image's height */
+
+      /* force image fit inside it's "box" */
+      -webkit-object-fit: cover;
+         -moz-object-fit: cover;
+          -ms-object-fit: cover;
+           -o-object-fit: cover;
+              object-fit: cover;
+  }
+}
